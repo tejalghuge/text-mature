@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .app-heading {
+            text-align: center;
+            font: 300px;
+            font-style: inherit;
+            color: rgb(43, 226, 52);
+        }
+
+        .text-container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .input-text {
+            width: 300px;
+            height: 90px;
+            background-color: rgb(214, 44, 214);
+            color: rgb(173, 11, 11);
+            border-radius: 5px;
+        }
+
+        .match-result {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 class="app-heading">TEXT MATCHE</h1>
+    <div class="text-container">
+        <input type="text" class="input-text" onkeyup="comparetext()" id="input-1">
+        <input type="text" class="input-text" onkeyup="comparetext()" id="input-2">
+    </div>
+    <p class="match-result" id="match-result"></p>
+
+<script>
+    function comparetext() {
+        const input1Element = document.getElementById("input-1")
+        const input2Element = document.getElementById("input-2")
+        const resultElement = document.getElementById("match-result")
+        if (input1Element.value == input2Element.value) 
+        {
+            resultElement.innerText = " Text Match!!!"
+            resultElement.style.color = "green"
+        }
+        else {
+            resultElement.innerText = " Text not match !!!"
+            resultElement.style.color = "red"
+        }
+    }
+</script>
+    
+</body>
+</html>
